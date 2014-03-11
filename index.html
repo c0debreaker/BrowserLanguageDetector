@@ -1,0 +1,15 @@
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="language.js"> </script>
+</head>
+<body>
+<script>
+    captureBrowserLanguage(function(language) {
+        console.log("Browser language : " + language );
+        // You can use it with i18next library
+        // i18n.init({ lng: language})
+    });
+</script>
+</body>
+</html>
