@@ -5,7 +5,7 @@ There are different ways of detecting the language that is configured on our bro
 
 Detecting browser's language can easily be achieved on the server-side. We only need Apache. Most of the solutions I've found used another interpreter like PHP or JAVA. The server-side solution shown here is purely at Apache level. Using Window.navigator is unreliable.
 
-Every time we make an HTTP call to the server like GET or POST method, the browser also sends **Accept-Language** in the **Request Header**. This header will be captured by our Apache rule(see below). What our Apache is going to do is just return it back as a Response Header. This is awesome since there is no third party application that needs to parse the request. I've tried it on different browsers like Chrome, Firefox, IE and Safari and so far, it's working like a charm.
+Every time we make an HTTP call to the server like GET or POST method, the browser also sends **Accept-Language** in the **Request Header**. This header will be captured by our Apache rule(see below). What our Apache is going to do is just return it back as a Response Header. This is awesome since there is no third party application required that needs to parse the request. I've tried it on different browsers like Chrome, Firefox, IE and Safari and so far, it's working like a charm.
 
 Here are the steps. This should be done on the UNIX machine running Apache
 
