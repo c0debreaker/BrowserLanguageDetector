@@ -6,7 +6,7 @@ Detecting browser's language can easily be achieved on the server-side. We only 
 
 Every time we make an HTTP call to the server like GET or POST method, the browser also sends **Accept-Language** in the **Request Header**. This header will be captured by our Apache rule(see below). What our Apache is going to do is just return it back as a Response Header. This is awesome since there is no third party application required that needs to parse the request. I've tried it on different browsers like Chrome, Firefox, IE and Safari and so far, it's working like a charm.
 
-# Usage
+# Apache Configuration
 
 Here are the steps. This should be done on the UNIX machine running Apache
 
@@ -28,7 +28,8 @@ Here are the steps. This should be done on the UNIX machine running Apache
 
 ```
 
-How to use it:
+# Usage
+
 ```
 <script>
     captureBrowserLanguage(function(language) {
